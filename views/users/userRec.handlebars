@@ -1,0 +1,39 @@
+<main>
+    <style>
+
+    </style>
+
+    <div class="container my-3">
+        <h2 class="font-weight-light"> &nbsp; &nbsp;Recommended Users</h2>
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="card card-userRec card-body justify-content-center">
+
+                    {{#each userRec}}
+                    <p><a href="/users/checkUser/{{this._id}}">{{this.firstName}}</a></p>
+                    <hr>
+                    {{/each}}
+
+                </div>
+
+            </div>
+
+        </div>
+        <h3 class="mt-2"> Above are the Recommended Users</h3>
+
+        {{#if hasErrors}}
+        <ul class="error-list">
+            {{#each errors}}
+            <li>
+                {{this}}
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+    <script>
+
+    </script>
+</main>
